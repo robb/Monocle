@@ -1,0 +1,11 @@
+language: objective-c
+osx_image: xcode61
+before_install:
+    - brew update
+    - brew install carthage
+    - gem install xcpretty
+install:
+    - carthage bootstrap
+script:
+    - set -o pipefail && xcodebuild -scheme 'Cartography-Mac' test | xcpretty -c
+    - set -o pipefail && xcodebuild -scheme 'Cartography-iOS' test | xcpretty -c
