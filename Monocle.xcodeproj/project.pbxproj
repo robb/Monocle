@@ -9,9 +9,9 @@
 /* Begin PBXBuildFile section */
 		544A7A9E1A8E1CD70056DE25 /* Monocle.h in Headers */ = {isa = PBXBuildFile; fileRef = 544A7A9D1A8E1CD70056DE25 /* Monocle.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		544A7AA41A8E1CD70056DE25 /* Monocle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 544A7A981A8E1CD70056DE25 /* Monocle.framework */; };
-		544A7AAB1A8E1CD70056DE25 /* Specs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 544A7AAA1A8E1CD70056DE25 /* Specs.swift */; };
+		544A7AAB1A8E1CD70056DE25 /* LensSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 544A7AAA1A8E1CD70056DE25 /* LensSpec.swift */; };
 		544A7AC41A8E1D4F0056DE25 /* Monocle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 544A7AB91A8E1D4E0056DE25 /* Monocle.framework */; };
-		544A7AD21A8E1DA70056DE25 /* Specs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 544A7AAA1A8E1CD70056DE25 /* Specs.swift */; };
+		544A7AD21A8E1DA70056DE25 /* LensSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 544A7AAA1A8E1CD70056DE25 /* LensSpec.swift */; };
 		544A7AD31A8E1DAD0056DE25 /* Monocle.h in Headers */ = {isa = PBXBuildFile; fileRef = 544A7A9D1A8E1CD70056DE25 /* Monocle.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		549FBC901A8E27910002D8D6 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 549FBC8E1A8E27850002D8D6 /* Nimble.framework */; };
 		549FBC911A8E27910002D8D6 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 549FBC8F1A8E27850002D8D6 /* Quick.framework */; };
@@ -21,6 +21,8 @@
 		549FBC961A8E27DA0002D8D6 /* Quick.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 549FBC8F1A8E27850002D8D6 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		549FBC991A8E27FC0002D8D6 /* Nimble.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 549FBC8B1A8E27850002D8D6 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		549FBC9A1A8E27FC0002D8D6 /* Quick.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 549FBC8C1A8E27850002D8D6 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		549FBC9C1A8E295F0002D8D6 /* Lens.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549FBC9B1A8E295E0002D8D6 /* Lens.swift */; };
+		549FBC9D1A8E2A3C0002D8D6 /* Lens.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549FBC9B1A8E295E0002D8D6 /* Lens.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,13 +75,14 @@
 		544A7A9D1A8E1CD70056DE25 /* Monocle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Monocle.h; sourceTree = "<group>"; };
 		544A7AA31A8E1CD70056DE25 /* Specs-Mac.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Specs-Mac.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		544A7AA91A8E1CD70056DE25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		544A7AAA1A8E1CD70056DE25 /* Specs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Specs.swift; sourceTree = "<group>"; };
+		544A7AAA1A8E1CD70056DE25 /* LensSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LensSpec.swift; sourceTree = "<group>"; };
 		544A7AB91A8E1D4E0056DE25 /* Monocle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Monocle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		544A7AC31A8E1D4E0056DE25 /* Specs-iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Specs-iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		549FBC8B1A8E27850002D8D6 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Nimble.framework; sourceTree = "<group>"; };
 		549FBC8C1A8E27850002D8D6 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Quick.framework; sourceTree = "<group>"; };
 		549FBC8E1A8E27850002D8D6 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Nimble.framework; sourceTree = "<group>"; };
 		549FBC8F1A8E27850002D8D6 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Quick.framework; sourceTree = "<group>"; };
+		549FBC9B1A8E295E0002D8D6 /* Lens.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lens.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				544A7A9D1A8E1CD70056DE25 /* Monocle.h */,
+				549FBC9B1A8E295E0002D8D6 /* Lens.swift */,
 				544A7A9B1A8E1CD70056DE25 /* Supporting Files */,
 			);
 			path = Monocle;
@@ -161,7 +165,7 @@
 		544A7AA71A8E1CD70056DE25 /* Specs */ = {
 			isa = PBXGroup;
 			children = (
-				544A7AAA1A8E1CD70056DE25 /* Specs.swift */,
+				544A7AAA1A8E1CD70056DE25 /* LensSpec.swift */,
 				544A7AA81A8E1CD70056DE25 /* Supporting Files */,
 			);
 			path = Specs;
@@ -378,6 +382,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				549FBC9D1A8E2A3C0002D8D6 /* Lens.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -385,7 +390,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				544A7AAB1A8E1CD70056DE25 /* Specs.swift in Sources */,
+				544A7AAB1A8E1CD70056DE25 /* LensSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -393,6 +398,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				549FBC9C1A8E295F0002D8D6 /* Lens.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -400,7 +406,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				544A7AD21A8E1DA70056DE25 /* Specs.swift in Sources */,
+				544A7AD21A8E1DA70056DE25 /* LensSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -572,6 +578,7 @@
 		544A7ACD1A8E1D4F0056DE25 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -588,6 +595,7 @@
 				PRODUCT_NAME = Monocle;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -595,6 +603,7 @@
 		544A7ACE1A8E1D4F0056DE25 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
