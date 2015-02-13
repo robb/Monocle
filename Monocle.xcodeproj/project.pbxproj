@@ -13,6 +13,14 @@
 		544A7AC41A8E1D4F0056DE25 /* Monocle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 544A7AB91A8E1D4E0056DE25 /* Monocle.framework */; };
 		544A7AD21A8E1DA70056DE25 /* Specs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 544A7AAA1A8E1CD70056DE25 /* Specs.swift */; };
 		544A7AD31A8E1DAD0056DE25 /* Monocle.h in Headers */ = {isa = PBXBuildFile; fileRef = 544A7A9D1A8E1CD70056DE25 /* Monocle.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		549FBC901A8E27910002D8D6 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 549FBC8E1A8E27850002D8D6 /* Nimble.framework */; };
+		549FBC911A8E27910002D8D6 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 549FBC8F1A8E27850002D8D6 /* Quick.framework */; };
+		549FBC921A8E279B0002D8D6 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 549FBC8B1A8E27850002D8D6 /* Nimble.framework */; };
+		549FBC931A8E279B0002D8D6 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 549FBC8C1A8E27850002D8D6 /* Quick.framework */; };
+		549FBC951A8E27D90002D8D6 /* Nimble.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 549FBC8E1A8E27850002D8D6 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		549FBC961A8E27DA0002D8D6 /* Quick.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 549FBC8F1A8E27850002D8D6 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		549FBC991A8E27FC0002D8D6 /* Nimble.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 549FBC8B1A8E27850002D8D6 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		549FBC9A1A8E27FC0002D8D6 /* Quick.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 549FBC8C1A8E27850002D8D6 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +40,33 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		549FBC941A8E27A50002D8D6 /* Copy Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				549FBC951A8E27D90002D8D6 /* Nimble.framework in Copy Frameworks */,
+				549FBC961A8E27DA0002D8D6 /* Quick.framework in Copy Frameworks */,
+			);
+			name = "Copy Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		549FBC981A8E27E90002D8D6 /* Copy Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				549FBC991A8E27FC0002D8D6 /* Nimble.framework in Copy Frameworks */,
+				549FBC9A1A8E27FC0002D8D6 /* Quick.framework in Copy Frameworks */,
+			);
+			name = "Copy Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		544A7A981A8E1CD70056DE25 /* Monocle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Monocle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		544A7A9C1A8E1CD70056DE25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -41,6 +76,10 @@
 		544A7AAA1A8E1CD70056DE25 /* Specs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Specs.swift; sourceTree = "<group>"; };
 		544A7AB91A8E1D4E0056DE25 /* Monocle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Monocle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		544A7AC31A8E1D4E0056DE25 /* Specs-iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Specs-iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		549FBC8B1A8E27850002D8D6 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Nimble.framework; sourceTree = "<group>"; };
+		549FBC8C1A8E27850002D8D6 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Quick.framework; sourceTree = "<group>"; };
+		549FBC8E1A8E27850002D8D6 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Nimble.framework; sourceTree = "<group>"; };
+		549FBC8F1A8E27850002D8D6 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Quick.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +95,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				544A7AA41A8E1CD70056DE25 /* Monocle.framework in Frameworks */,
+				549FBC901A8E27910002D8D6 /* Nimble.framework in Frameworks */,
+				549FBC911A8E27910002D8D6 /* Quick.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,6 +112,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				544A7AC41A8E1D4F0056DE25 /* Monocle.framework in Frameworks */,
+				549FBC921A8E279B0002D8D6 /* Nimble.framework in Frameworks */,
+				549FBC931A8E279B0002D8D6 /* Quick.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,6 +125,7 @@
 			children = (
 				544A7A9A1A8E1CD70056DE25 /* Monocle */,
 				544A7AA71A8E1CD70056DE25 /* Specs */,
+				549FBC891A8E27850002D8D6 /* Frameworks */,
 				544A7A991A8E1CD70056DE25 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -131,6 +175,34 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		549FBC891A8E27850002D8D6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				549FBC8A1A8E27850002D8D6 /* iOS */,
+				549FBC8D1A8E27850002D8D6 /* Mac */,
+			);
+			name = Frameworks;
+			path = Carthage/Build;
+			sourceTree = "<group>";
+		};
+		549FBC8A1A8E27850002D8D6 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				549FBC8B1A8E27850002D8D6 /* Nimble.framework */,
+				549FBC8C1A8E27850002D8D6 /* Quick.framework */,
+			);
+			path = iOS;
+			sourceTree = "<group>";
+		};
+		549FBC8D1A8E27850002D8D6 /* Mac */ = {
+			isa = PBXGroup;
+			children = (
+				549FBC8E1A8E27850002D8D6 /* Nimble.framework */,
+				549FBC8F1A8E27850002D8D6 /* Quick.framework */,
+			);
+			path = Mac;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -177,6 +249,7 @@
 			buildPhases = (
 				544A7A9F1A8E1CD70056DE25 /* Sources */,
 				544A7AA01A8E1CD70056DE25 /* Frameworks */,
+				549FBC941A8E27A50002D8D6 /* Copy Frameworks */,
 				544A7AA11A8E1CD70056DE25 /* Resources */,
 			);
 			buildRules = (
@@ -213,6 +286,7 @@
 			buildPhases = (
 				544A7ABF1A8E1D4E0056DE25 /* Sources */,
 				544A7AC01A8E1D4E0056DE25 /* Frameworks */,
+				549FBC981A8E27E90002D8D6 /* Copy Frameworks */,
 				544A7AC11A8E1D4E0056DE25 /* Resources */,
 			);
 			buildRules = (
@@ -468,6 +542,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
 				);
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -486,6 +561,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
 				);
 				INFOPLIST_FILE = Specs/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
@@ -542,6 +618,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -561,6 +638,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = Specs/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
