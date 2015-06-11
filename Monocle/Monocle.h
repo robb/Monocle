@@ -6,8 +6,10 @@
 //  Copyright (c) 2015 Robert Böhnke. All rights reserved.
 //
 
+#import <Foundation/Foundation.h>
+
 //! Project version number for Monocle.
-extern double MonocleVersionNumber;
+FOUNDATION_EXPORT double MonocleVersionNumber;
 
 //! Project version string for Monocle.
-extern const unsigned char MonocleVersionString[];
+FOUNDATION_EXPORT const unsigned char MonocleVersionString[];

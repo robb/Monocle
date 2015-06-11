@@ -26,7 +26,7 @@ public struct Lens<A, B> {
 
 // MARK: - Basics
 
-public func get<A, B>(lens: Lens<A, B>, a: A) -> B {
+public func get<A, B>(lens: Lens<A, B>, _ a: A) -> B {
     return lens.get(a)
 }
 
@@ -34,29 +34,29 @@ public func get<A, B>(lens: Lens<A, B>)(a: A) -> B {
     return lens.get(a)
 }
 
-public func get<A, B>(lens: Lens<A, B>, a: A?) -> B? {
-    return map(a, lens.get)
+public func get<A, B>(lens: Lens<A, B>, _ a: A?) -> B? {
+    return a.map(lens.get)
 }
 
 public func get<A, B>(lens: Lens<A, B>)(a: A?) -> B? {
-    return map(a, lens.get)
+    return a.map(lens.get)
 }
 
-public func set<A, B>(lens: Lens<A, B>, a: A, b: B) -> A {
+public func set<A, B>(lens: Lens<A, B>, _ a: A, _ b: B) -> A {
     return lens.set(a, b)
 }
 
-public func set<A, B>(lens: Lens<A, B>, a: A)(b: B) -> A {
+public func set<A, B>(lens: Lens<A, B>, _ a: A)(b: B) -> A {
     return lens.set(a, b)
 }
 
-public func mod<A, B>(lens: Lens<A, B>, a: A, f: B -> B) -> A {
+public func mod<A, B>(lens: Lens<A, B>, _ a: A, _ f: B -> B) -> A {
     return set(lens, a, f(get(lens, a)))
 }
 
 // MARK: - Compose
 
-public func compose<A, B, C>(left: Lens<A, B>, right: Lens<B, C>) -> Lens<A, C> {
+public func compose<A, B, C>(left: Lens<A, B>, _ right: Lens<B, C>) -> Lens<A, C> {
     let get: A -> C = { a in
         return right.get(left.get(a))
     }
@@ -90,11 +90,11 @@ public func <<< <A, B, C>(lhs: Lens<B, C>, rhs: Lens<A, B>) -> Lens<A, C> {
 
 public func lift<A, B>(lens: Lens<A, B>) -> Lens<[A], [B]> {
     let get: [A] -> [B] = { xs in
-        return map(xs, lens.get)
+        return xs.map(lens.get)
     }
 
     let set: ([A], [B]) -> [A] = { xs, ys in
-        return map(zip(xs, ys), lens.set)
+        return zip(xs, ys).map(lens.set)
     }
 
     return Lens(get: get, set: set)
@@ -102,7 +102,7 @@ public func lift<A, B>(lens: Lens<A, B>) -> Lens<[A], [B]> {
 
 // MARK: - Split
 
-public func split<A, B, C, D>(left: Lens<A, B>, right: Lens<C, D>) -> Lens<(A, C), (B, D)> {
+public func split<A, B, C, D>(left: Lens<A, B>, _ right: Lens<C, D>) -> Lens<(A, C), (B, D)> {
     let get: (A, C) -> (B, D) = { (a, c) in
         return (left.get(a), right.get(c))
     }
@@ -125,7 +125,7 @@ public func *** <A, B, C, D>(lhs: Lens<A, B>, rhs: Lens<C, D>) -> Lens<(A, C), (
 
 // MARK: - Fanout
 
-public func fanout<A, B, C>(left: Lens<A, B>, right: Lens<A, C>) -> Lens<A, (B, C)> {
+public func fanout<A, B, C>(left: Lens<A, B>, _ right: Lens<A, C>) -> Lens<A, (B, C)> {
     let get: A -> (B, C) = { a in
         return (left.get(a), right.get(a))
     }
