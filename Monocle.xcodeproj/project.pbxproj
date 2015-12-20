@@ -9,9 +9,7 @@
 /* Begin PBXBuildFile section */
 		544A7A9E1A8E1CD70056DE25 /* Monocle.h in Headers */ = {isa = PBXBuildFile; fileRef = 544A7A9D1A8E1CD70056DE25 /* Monocle.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		544A7AA41A8E1CD70056DE25 /* Monocle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 544A7A981A8E1CD70056DE25 /* Monocle.framework */; };
-		544A7AAB1A8E1CD70056DE25 /* LensSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 544A7AAA1A8E1CD70056DE25 /* LensSpec.swift */; };
 		544A7AC41A8E1D4F0056DE25 /* Monocle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 544A7AB91A8E1D4E0056DE25 /* Monocle.framework */; };
-		544A7AD21A8E1DA70056DE25 /* LensSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 544A7AAA1A8E1CD70056DE25 /* LensSpec.swift */; };
 		544A7AD31A8E1DAD0056DE25 /* Monocle.h in Headers */ = {isa = PBXBuildFile; fileRef = 544A7A9D1A8E1CD70056DE25 /* Monocle.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		549FBC901A8E27910002D8D6 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 549FBC8E1A8E27850002D8D6 /* Nimble.framework */; };
 		549FBC911A8E27910002D8D6 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 549FBC8F1A8E27850002D8D6 /* Quick.framework */; };
@@ -23,6 +21,8 @@
 		549FBC9A1A8E27FC0002D8D6 /* Quick.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 549FBC8C1A8E27850002D8D6 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		549FBC9C1A8E295F0002D8D6 /* Lens.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549FBC9B1A8E295E0002D8D6 /* Lens.swift */; };
 		549FBC9D1A8E2A3C0002D8D6 /* Lens.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549FBC9B1A8E295E0002D8D6 /* Lens.swift */; };
+		79FC75651C26EC0700E4BB29 /* LensSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 544A7AAA1A8E1CD70056DE25 /* LensSpec.swift */; };
+		79FC75661C26EC0800E4BB29 /* LensSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 544A7AAA1A8E1CD70056DE25 /* LensSpec.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -309,6 +309,7 @@
 		544A7A8F1A8E1CD70056DE25 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = "Robert Böhnke";
 				TargetAttributes = {
@@ -390,7 +391,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				544A7AAB1A8E1CD70056DE25 /* LensSpec.swift in Sources */,
+				79FC75661C26EC0800E4BB29 /* LensSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -406,7 +407,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				544A7AD21A8E1DA70056DE25 /* LensSpec.swift in Sources */,
+				79FC75651C26EC0700E4BB29 /* LensSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
