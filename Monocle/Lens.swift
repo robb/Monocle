@@ -17,7 +17,8 @@ public struct Lens<A, B> {
 
     public init(get: A -> B, set: (inout A, B) -> ()) {
         self.get = get
-        self.set = { (var a, b) in
+        self.set = { (a, b) in
+            var a = a
             set(&a, b)
             return a
         }
@@ -30,24 +31,30 @@ public func get<A, B>(lens: Lens<A, B>, _ a: A) -> B {
     return lens.get(a)
 }
 
-public func get<A, B>(lens: Lens<A, B>)(_ a: A) -> B {
-    return lens.get(a)
+public func get<A, B>(lens: Lens<A, B>) -> (A) -> B {
+    return {(a: A) -> B in
+        return lens.get(a)
+    }
 }
 
 public func get<A, B>(lens: Lens<A, B>, _ a: A?) -> B? {
     return a.map(lens.get)
 }
 
-public func get<A, B>(lens: Lens<A, B>)(_ a: A?) -> B? {
-    return a.map(lens.get)
+public func get<A, B>(lens: Lens<A, B>) -> (A?) -> B? {
+    return {(a: A?) -> B? in
+        return a.map(lens.get)
+    }
 }
 
 public func set<A, B>(lens: Lens<A, B>, _ a: A, _ b: B) -> A {
     return lens.set(a, b)
 }
 
-public func set<A, B>(lens: Lens<A, B>, _ a: A)(_ b: B) -> A {
-    return lens.set(a, b)
+public func set<A, B>(lens: Lens<A, B>, _ a: A) -> (B) -> A {
+    return {(b: B) -> A in
+        return lens.set(a, b)
+    }
 }
 
 public func mod<A, B>(lens: Lens<A, B>, _ a: A, _ f: B -> B) -> A {
