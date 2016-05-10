@@ -30,28 +30,28 @@ public func get<A, B>(lens: Lens<A, B>, a: A) -> B {
     return lens.get(a)
 }
 
-public func get<A, B>(lens: Lens<A, B>)(a: A) -> B {
-    return lens.get(a)
+public func get<A, B>(lens: Lens<A, B>) -> (a: A) -> B {
+    return lens.get
 }
 
 public func get<A, B>(lens: Lens<A, B>, a: A?) -> B? {
-    return map(a, lens.get)
+    return a.map(lens.get)
 }
 
-public func get<A, B>(lens: Lens<A, B>)(a: A?) -> B? {
-    return map(a, lens.get)
+public func get<A, B>(lens: Lens<A, B>) -> (a: A?) -> B? {
+  return { $0.map(lens.get) }
 }
 
 public func set<A, B>(lens: Lens<A, B>, a: A, b: B) -> A {
     return lens.set(a, b)
 }
 
-public func set<A, B>(lens: Lens<A, B>, a: A)(b: B) -> A {
-    return lens.set(a, b)
+public func set<A, B>(lens: Lens<A, B>, a: A) -> (b: B) -> A {
+  return { lens.set(a, $0) }
 }
 
 public func mod<A, B>(lens: Lens<A, B>, a: A, f: B -> B) -> A {
-    return set(lens, a, f(get(lens, a)))
+    return set(lens, a: a, b: f(get(lens, a: a)))
 }
 
 // MARK: - Compose
@@ -74,7 +74,7 @@ infix operator >>> {
 }
 
 public func >>> <A, B, C>(lhs: Lens<A, B>, rhs: Lens<B, C>) -> Lens<A, C> {
-    return compose(lhs, rhs)
+    return compose(lhs, right: rhs)
 }
 
 infix operator <<< {
@@ -83,18 +83,18 @@ infix operator <<< {
 }
 
 public func <<< <A, B, C>(lhs: Lens<B, C>, rhs: Lens<A, B>) -> Lens<A, C> {
-    return compose(rhs, lhs)
+    return compose(rhs, right: lhs)
 }
 
 // MARK: - Lift
 
 public func lift<A, B>(lens: Lens<A, B>) -> Lens<[A], [B]> {
     let get: [A] -> [B] = { xs in
-        return map(xs, lens.get)
+        return xs.map(lens.get)
     }
 
     let set: ([A], [B]) -> [A] = { xs, ys in
-        return map(zip(xs, ys), lens.set)
+        return zip(xs, ys).map(lens.set)
     }
 
     return Lens(get: get, set: set)
@@ -120,7 +120,7 @@ infix operator *** {
 }
 
 public func *** <A, B, C, D>(lhs: Lens<A, B>, rhs: Lens<C, D>) -> Lens<(A, C), (B, D)> {
-    return split(lhs, rhs)
+    return split(lhs, right: rhs)
 }
 
 // MARK: - Fanout
@@ -143,5 +143,5 @@ infix operator &&& {
 }
 
 public func &&& <A, B, C>(lhs: Lens<A, B>, rhs: Lens<A, C>) -> Lens<A, (B, C)> {
-    return fanout(lhs, rhs)
+    return fanout(lhs, right: rhs)
 }
