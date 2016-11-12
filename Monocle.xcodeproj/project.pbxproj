@@ -534,6 +534,7 @@
 				INFOPLIST_FILE = Monocle/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.robertboehnke.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = Monocle;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 2.3;
@@ -552,6 +553,7 @@
 				INFOPLIST_FILE = Monocle/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.robertboehnke.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = Monocle;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 2.3;
@@ -573,6 +575,7 @@
 				);
 				INFOPLIST_FILE = Specs/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.robertboehnke.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 2.3;
 			};
@@ -589,6 +592,7 @@
 				);
 				INFOPLIST_FILE = Specs/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.robertboehnke.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 2.3;
 			};
@@ -610,6 +614,7 @@
 				INFOPLIST_FILE = Monocle/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.robertboehnke.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = Monocle;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -631,6 +636,7 @@
 				INFOPLIST_FILE = Monocle/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.robertboehnke.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = Monocle;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -654,6 +660,7 @@
 				INFOPLIST_FILE = Specs/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.robertboehnke.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 2.3;
@@ -670,6 +677,7 @@
 				INFOPLIST_FILE = Specs/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.robertboehnke.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 2.3;
